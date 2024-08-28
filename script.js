@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 		localStorage.removeItem("password");
 	}
 	alert(`Logged in as ${username}`)
-	// document.getElementById("existing").style.display = "block"
+	document.getElementById("existing").style.display = "block"
 
 	}) 
 	 
