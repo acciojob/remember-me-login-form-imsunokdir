@@ -1,17 +1,18 @@
 //your JS code here. If required.
 
-const loginForm = document.getElementById("login-form");
+const loginForm = document.getElementById("login-form"); 
 
 document.addEventListener('DOMContentLoaded',()=>{
 	const uName = localStorage.getItem("username");
 	const pWord = localStorage.getItem("password");
-
+	const exist = document.getElementById("existing")
 	if(uName && pWord){
-		const exist = document.getElementById("existing")
 		exist.style.display="block"
 		exist.addEventListener('click',()=>{
 		alert(`Logged in as ${uName}`) 
 	})
+	}else{
+		exist.style.display="none"
 	}
 
 	loginForm.addEventListener("submit",(event)=>{
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 	const remember = document.getElementById("checkbox").checked;
 
 	if(remember){
-		localStorage.setItem('username',username);
+		localStorage.setItem('username',username); 
 		localStorage.setItem('password', password);
 	}else{
 		localStorage.removeItem("username"); 
@@ -30,8 +31,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 	alert(`Logged in as ${username}`)
 	// document.getElementById("existing").style.display = "block"
 
-	})
-	
+	}) 
+	 
 	
 })
 
